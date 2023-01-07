@@ -1,0 +1,85 @@
+.mtx {
+    &--align-items-center {
+        align-items: center !important;
+    }
+    
+    &--align-items-start {
+        align-items: flex-start !important;
+    }
+
+    &--align-items-end {
+        align-items: flex-end !important;
+    }
+
+    &--justify-content-center {
+        justify-content: center !important;
+    }
+
+    &--justify-content-start {
+        justify-content: start !important;
+    }
+
+    &--justify-content-end {
+        justify-content: end !important;
+    }
+
+    &--text-white {
+        color: $white-color !important;
+    }
+
+    &--text-muted {
+        color: $muted-bg !important;
+    }
+
+    &--text-primary {
+        color: $blue-color !important;
+    }
+
+    &--text-secondary {
+        color: $smoke-gray !important;
+    }
+
+    &--text-danger {
+        color: $danger-color !important;
+    }
+
+    &--text-warning {
+        color: $warning-color !important;
+    }
+
+    &--text-uppercase {
+        text-transform: uppercase !important;
+    }
+
+    &--text-lowercase {
+        text-transform: lowercase !important;
+    }
+
+    &--text-capitalize {
+        text-transform: capitalize;
+    }
+
+    &--text-none {
+        text-transform: none !important;
+    }
+
+    &--opacity-0 {
+        @include x-opacity(0 !important);
+    }
+
+    &--opacity-25 {
+        @include x-opacity(.25 !important);
+    }
+
+    &--opacity-50 {
+        @include x-opacity(.5 !important);
+    }
+
+    &--opacity-75 {
+        @include x-opacity(.75 !important);
+    }
+
+    &--opacity-100 {
+        @include x-opacity(1 !important);
+    }
+}

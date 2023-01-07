@@ -1,0 +1,76 @@
+@mixin mtx--teams {
+    @include padding(100px 0);
+    position: relative;
+    display: block;
+    @include size-width(100%);
+    background-color: $white-color;
+
+    .mtx {
+
+        &--inner-head {
+            @include margin-bottom(2rem);
+        }
+
+        &--teams-card {
+            background-color: $white-color;
+            position: relative;
+            @include padding(20px);
+            @include border-radius(3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        &--teams-list {
+            @include display-grid();
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px;
+            position: relative;
+            @include size-width(100%);
+            list-style-type: none;
+
+            @media (min-width: 451px) and (max-width: 1199px) {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) )
+            }
+
+            @media (max-width: 450px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        &--teams-image {
+            @include sizes(100%, 250px);
+
+            img {
+                @include sizes(100%, 100%);
+                object-fit: cover;
+            }
+        }
+
+        &--teams-content {
+            @include padding(20px 0);
+            text-align: center;
+        }
+
+        &--teams-name {
+            font-size: 20px;
+            font-weight: 500;
+            position: relative;
+            color: $black-color;
+            display: block;
+            @include margin-bottom(10px);
+        }
+
+        &--teams-creative {
+            font-size: 13px;
+            font-weight: 400;
+            color: $smoke-gray;
+            position: relative;
+            display: block;
+            visibility: visible;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.mtx--teams {
+    @include mtx--teams;
+}

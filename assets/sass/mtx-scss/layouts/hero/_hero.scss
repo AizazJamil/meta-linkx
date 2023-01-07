@@ -1,0 +1,127 @@
+@mixin mtx--hero {
+    @include sizes(100%, 700px);
+    @include padding(150px 0 0 0);
+    position: relative;
+    @include flex--config($flex-wrap: wrap, $align-items: center, $justify-content: flex-start);
+    // @include prefix(transform, skew(5deg) scale(1.1), webkit ms);
+
+    @media (max-width: 991px) {
+        @include sizes(100%, 100%);
+        @include padding(80px 2rem);
+    }
+
+    &:before {
+        content: '';
+        @include position(absolute, 0, 0, 0, 0);
+        // background-image: url()
+        background-color: $blue-color;
+        @include sizes(100%, 100%);
+    }
+
+    .hero--container {
+        @include max-size-width(70%);
+        @include margin-inline(auto);
+
+        @media (min-width: 1200px) and (max-width: 1750px) {
+            @include max-size-width(90%);
+        }
+
+        @media (max-width: 1199px) {
+            @include max-size-width(90%);
+        }
+    }
+
+    h3 {
+        font-size: $font-size-large;
+        font-weight: bold;
+        font-family: $mtx-font-family;
+        line-height: 80px;
+        text-align: left;
+        position: relative;
+        display: block;
+        @include margin-top(50px);
+        @include size-width(80%);
+
+        @media (min-width: 1400px) and (max-width: 1760px) {
+            font-size: 50px;
+            line-height: 60px;
+        }
+
+        @media (min-width: 1200px) and (max-width: 1399px) {
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        @media (max-width: 1199px) {
+            @include margin-bottom(40px);
+        }
+
+        @media (min-width: 451px) and (max-width: 767px) {
+            font-size: 30px;
+            line-height: 40px;
+            @include size-width(100%);
+            @include margin-top(0);
+        }
+
+        @media (max-width: 450px) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    .mtx {
+
+        &--column-6 {
+            @media (max-width: 1199px) {
+                @include size-width(100%);
+            }
+        }
+
+        &--hero-content,
+        &--hero-image {
+            z-index: 1;
+            position: relative;
+            // @include prefix(transform, skew(-5deg) scale(1), webkit ms);
+        }
+
+        // &--hero-content {
+
+        // }
+
+        &--hero-image {
+            @include sizes(600px, 600px);
+            @include border-radius(5px);
+            border: 5px solid $white-color;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+            @media (min-width: 1200px) and (max-width: 1399px) {
+                @include size-width(500px);
+                // display: none;
+            }
+
+            @media (min-width: 768px) and (max-width: 1199px) {
+                @include sizes(100%, 400px);
+                // display: none;
+            }
+
+            @media (max-width: 767px) {
+                @include sizes(100%, 300px);
+                // display: none;
+            }
+        }
+
+        &--hero-img {
+            object-fit: cover;
+            @include sizes(100%, 100%);
+        }
+    }
+}
+
+.mtx--hero {
+    @include mtx--hero;
+}

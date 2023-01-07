@@ -1,0 +1,13 @@
+// section inner
+.hp--section-inner {
+  @include padding-left(100px);
+}
+
+// color section
+@mixin helpdown--color-section {
+  position: relative;
+}
+
+.helpdown--color-section {
+  @include helpdown--color-section;
+}

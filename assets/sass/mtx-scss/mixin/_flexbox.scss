@@ -1,0 +1,39 @@
+@mixin flex--config($justify-content: false, $flex: false, $flex-direction: false, $align-items: false, $flex-wrap: false, $flex-basis: false, $align-self: false, $flex-flow: false) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  @if $justify-content != false {
+    justify-content: $justify-content;
+  }
+
+  @if $flex != false {
+    flex: $flex;
+  }
+
+  @if $flex-direction != false {
+    flex-direction: $flex-direction;
+  }
+
+  @if $align-items != false {
+    align-items: $align-items;
+  }
+
+  @if $flex-wrap != false {
+    flex-wrap: $flex-wrap;
+  }
+
+  @if $flex-basis != false {
+    flex-basis: $flex-basis;
+  }
+
+  @if $align-self != false {
+    align-self: $align-self;
+  }
+
+  @if $flex-flow != false {
+    flex-flow: $flex-flow;
+  }
+}

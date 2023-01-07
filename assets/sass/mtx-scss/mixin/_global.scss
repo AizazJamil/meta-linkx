@@ -1,0 +1,13 @@
+img,
+svg  {
+    vertical-align: middle;
+}
+
+.mtx-image-fluid {
+    @include max-size-width(100%);
+    @include size-height(auto);
+}
+
+.mtx--row {
+    @include flex--config($flex-wrap: wrap);
+}

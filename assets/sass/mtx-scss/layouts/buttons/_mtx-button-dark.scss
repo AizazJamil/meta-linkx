@@ -1,0 +1,33 @@
+@mixin mtx--button-dark {
+    background-color: $black-bg;
+    position: relative;
+    @include border-radius(3px);
+    text-align: center;
+    color: $white-color;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    @include padding(18px 20px);
+    border: none;
+    z-index: 1;
+
+    &:before {
+        content: '';
+        @include position(absolute, 0, null, 0, 0);
+        @include sizes(4px, 100%);
+        display: block;
+        background-color: $dark-gray;
+    }
+
+    &:focus {
+        @include focus();
+    }
+
+    .icon {
+        @include margin-left(5px);
+    }
+}
+
+.mtx--button-dark {
+    @include mtx--button-dark;
+}

@@ -1,0 +1,42 @@
+.mtx--inner-head {
+  @include margin-bottom(100px);
+  h2 {
+    color: $black-color;
+    text-align: center;
+    position: relative;
+    font-size: $font-size-h1;
+    font-weight: bold;
+    font-family: $mtx-font-family;
+    @include max-size-width(300px);
+    @include margin-inline(auto);
+
+    &:before {
+      content: '';
+      @include position(absolute, null, 0, -20px, 0);
+      @include sizes(100%, 1px);
+      border-bottom: 1px dashed $black-color;
+      // background-color: $black-color;
+      display: block;
+    }
+
+    &:after {
+      content: '';
+      @include position(absolute, null, 0, -30px, 0);
+      @include sizes(80%, 1px);
+      border-bottom: 1px dashed $black-color;
+      // background-color: $black-color;
+      display: block;
+      @include margin-inline(auto);
+    }
+  }
+
+  h5 {
+    font-size: $font-size-paragraph;
+    font-weight: 400;
+    color: $dark-med-gray;
+    text-align: center;
+    position: relative;
+    display: block;
+    @include margin(4rem 0 0 0);
+  }
+}

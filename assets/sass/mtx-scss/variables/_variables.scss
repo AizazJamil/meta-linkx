@@ -1,0 +1,57 @@
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$mtx-font-family: 'Inter', sans-serif;
+
+
+$none:                       0   !default;
+$border-thin:                1px !default;
+$border-thick:               2px !default;
+
+$white-color:                #FFFFFF !default;
+$default-color:              #F7F7FA !default;
+$blue-color:                 #0D8CF7 !default;
+$danger-color:               #dc3545 !default;
+$warning-color:              #ffc107 !default;
+
+$black-color:                #1E1E1E !default;
+$black-bg:                   #000    !default;
+$muted-bg:                   #6c757d !default;
+
+$dark-gray:                  #434343 !default;
+$dark-med-gray:              #898989 !default;
+
+$smoke-gray:                 #CECFD9 !default;
+
+$dark-blue-color:            #040F3C !default;
+
+
+$font-size-xlarge:             160px   !default;
+$font-size-h1:                 40px    !default;
+$font-size-h2:                 32px    !default;
+$font-size-h3:                 28px    !default;
+$font-size-h4:                 24px    !default;
+$font-size-h5:                 20px    !default;
+$font-size-h6:                 16px    !default;
+
+$font-size-large:              60px    !default;
+$font-size-base:               14px    !default;
+$font-size-paragraph:          16px    !default;
+$font-size-blockquote:         20px    !default;
+$font-size-small:              12px    !default;
+$font-size-mini:               10px    !default;
+
+$font-weight-thin:             100     !default;
+$font-weight-light:            300     !default;
+$font-weight-normal:           400     !default;
+$font-weight-semi:             600     !default;
+$font-weight-bold:             700     !default;
+$font-weight-extraBold:        900     !default;
+
+$letter-spacing-normal:        2px !default;
+$letter-spacing-default:       auto !default;
+
+$transition-linear:         linear     !default;
+$transition-bezier:         cubic-bezier(0.34, 1.61, 0.7, 1) !default;
+$transition-ease:           ease 0s;

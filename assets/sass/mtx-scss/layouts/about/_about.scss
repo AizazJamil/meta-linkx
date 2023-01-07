@@ -1,0 +1,31 @@
+@mixin mtx--about {
+    position: relative;
+    @include padding(250px 0);
+    @include size-width(100%);
+    background-color: #F3F3F3;
+    @include margin-inline(auto);
+
+    @media (max-width: 991px) {
+        @include padding(100px 0);
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: normal;
+        font-family: $mtx-font-family;
+        position: relative;
+        text-align: center;
+        color: $dark-med-gray;
+        line-height: 21px;
+        display: block;
+    }
+
+    .mtx--hero-image {
+        position: relative;
+        @include margin-inline(auto);
+    }
+}
+
+.mtx--about {
+    @include mtx--about;
+}

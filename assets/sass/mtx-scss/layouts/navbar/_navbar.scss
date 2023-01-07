@@ -1,0 +1,103 @@
+@mixin mtx--navigation {
+    @include padding(15px 0);
+    @include size-width(100%);
+    position: relative;
+    display: block;
+    background-color: $white-color;
+    z-index: 9999;
+
+    .mtx {
+        &--navbar-flex {
+            @include flex--config($flex-wrap: wrap, $align-items: center, $justify-content: space-between);
+            @include size-width(100%);
+
+            // @media (max-width: 991px) {
+            //     flex-direction: column;
+            // }
+        }
+
+        &--mobile-hamburger {
+            @media (min-width: 992px) {
+                display: none;
+            }
+
+            @media (max-width: 991px) {
+                @include margin(2rem);
+                @include flex--config($flex-flow: column wrap, $justify-content: space-between);
+                @include sizes(2.5rem, 2.5rem);
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+            }
+        }
+
+        &--bar-top,
+        &--bar-middle,
+        &--bar-bottom {
+            // @include size-height(5px);
+            background: $dark-blue-color;
+            @include border-radius(5px);
+            @include margin(3px 0);
+            transform-origin: left;
+            @include transition(all 0.5s);
+            @include sizes(100%, 5px);
+        }
+
+        &--navbar-collapse {
+            
+            @media (max-width: 991px) {
+                @include size-width(100%);
+                // display: none;
+                @include size-height(0);
+                // @include prefix(transform, translateY(-100%), wekit ms);
+                overflow: hidden;
+                @include transition(height 0.25s ease);
+            }
+
+            &.navbar-collapse-show {
+                @media (max-width: 991px) {
+                    @include size-height(auto !important);
+                    @include transition(height 0.25s ease);
+                }
+            }
+        }
+
+        &--navbar-list {
+            @include flex--config($flex-wrap: wrap, $align-items: center, $justify-content: flex-end);
+
+            @media (max-width: 991px) {
+                flex-direction: column;
+                // align-items: flex-start;
+                // justify-content: flex-start;
+                @include padding(20px 0);
+            }
+        }
+
+        &--navbar-item {
+            &:not(:last-of-type) {
+                @include margin-right(60px);
+
+                @media (max-width: 991px) {
+                    @include margin-right(0);
+                    @include margin-bottom(20px);
+                }
+            }
+        }
+
+        &--navbar-link {
+            font-size: $font-size-h5;
+            font-weight: $font-weight-normal;
+            font-family: $mtx-font-family;
+            position: relative;
+            color: $black-color;
+
+            &:hover {
+                color: $blue-color;
+            }
+        }
+    }
+}
+
+.mtx--navigation {
+    @include mtx--navigation;
+}
